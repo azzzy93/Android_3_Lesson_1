@@ -10,6 +10,7 @@ public class Film {
     private String releaseDate;
     @SerializedName("rt_score")
     private String rtScore;
+    private String image;
 
     public String getId() {
         return id;
@@ -57,5 +58,13 @@ public class Film {
 
     public void setRtScore(String rtScore) {
         this.rtScore = rtScore;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

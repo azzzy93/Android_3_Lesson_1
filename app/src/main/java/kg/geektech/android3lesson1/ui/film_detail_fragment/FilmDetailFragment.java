@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import kg.geektech.android3lesson1.App;
@@ -54,6 +56,7 @@ public class FilmDetailFragment extends Fragment {
                         binding.tvDesc.setText(response.body().getDescription());
                         String rating = "Rating score: " + response.body().getRtScore();
                         binding.tvRtScore.setText(rating);
+                        Glide.with(requireContext()).load(response.body().getImage()).into(binding.ivBanner);
                     }
                 }
 
